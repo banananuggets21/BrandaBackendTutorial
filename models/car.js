@@ -2,57 +2,53 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 /**
- * Schema to describe a ship.
+ * Schema to describe a car.
  */
 let CarSchema = new Schema({
   /**
-   * Name of this Ship
+   * Name of this car
    */
   make: {
     type: String
   },
   /**
-   * Ship's top speed in kts.
+   * Model of car
    */
   model: {
     type: String
   },
   /**
-   * When this Ship was designed.
+   * Model year
    */
   modelYear: {
     type: Date
   },
   /**
-   * When this Ship was launched.
+   * Range of Car (or milage)
    */
   range: {
     type: Number
   },
   /**
-   * Descriptor of ship's main battery guns.
+   * Odometer
    */
   odometer: {
     type: Number
   },
   /**
-   * Descriptor of the ship's secondary battery guns.
+   * Engine type
    */
   engineType: {
     type: String
   },
   /**
-   * Ship's belt armor in mm.
+   * Car Name
    */
   displayName: {
     type: String
   },
   vin: {
     type: new mongoose.Types.ObjectId
-  },
-  armor: {
-    value: {type: Number},
-    unit: {type: String, default: "mm"}
   }
 });
 
