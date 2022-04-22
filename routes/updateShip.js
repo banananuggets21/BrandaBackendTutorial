@@ -16,7 +16,7 @@ router.patch("/updateShip", function(req, res){
     // if no document was found
     else if(!doc){
       console.error("Error saving new ship",error);
-      res.status(500).send(error);
+      res.status(404).send(error);
     }
     // a document was found, return it instead.
     else{
